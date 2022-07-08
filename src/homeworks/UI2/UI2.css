@@ -1,0 +1,16 @@
+.yellow{
+    color: yellow;
+}
+.box-border2{
+    margin: 10px;
+    width: 350px;
+    height: auto;
+    border: 1px solid #aaa;
+    padding: 20px
+}
+.text-blue{
+    color:blue
+}
+.textUI2{
+    padding: 0px 0px 20px 20px
+}
