@@ -1,0 +1,28 @@
+.tabs_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: auto;
+  }
+.tabs_items {
+    padding: 20px;
+    border: none;
+    color: #464646
+}
+.tabs_items:focus {
+    background-color: green;
+    color:white;
+    border: none;
+    outline: none;
+}
+.tabs_content {
+    padding: 50px;
+    display: flex;
+    width: 880px;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+}
+
+
