@@ -1,6 +1,8 @@
 
 import './App.css';
 import Accordions from './homeworks/ss3/Accordions/Accordions';
+import Likebutton from './homeworks/ss3/Likebutton/Likebutton';
+import Likebutton2 from './homeworks/ss3/Likebutton/Likebutton2';
 // import StateClass from './components/state/state';
 import Tabs from './homeworks/ss3/Tabs/Tabs';
 // import ChartBar1 from './homeworks/ChartBar1/ChartBar1';
@@ -26,8 +28,10 @@ function App() {
       <ChartBar1 text='BASIC' color1='f368e0' color2='ff9ff3' percentage={80}></ChartBar1>
       <ChartBar1 text='OTHERS' color1='341f97' color2='5f27cd' percentage={37}></ChartBar1> */}
       {/* <StateClass></StateClass> */}
-      {/* <Tabs></Tabs> */}
-      <Accordions></Accordions>
+      {/* <Tabs></Tabs>
+      <Accordions></Accordions> */}
+      <Likebutton></Likebutton>
+      <Likebutton2></Likebutton2>
     </div>
     </>
   );
