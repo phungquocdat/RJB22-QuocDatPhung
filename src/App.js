@@ -1,10 +1,10 @@
 
 import './App.css';
-import Accordions from './homeworks/ss3/Accordions/Accordions';
-import Likebutton from './homeworks/ss3/Likebutton/Likebutton';
-import Likebutton2 from './homeworks/ss3/Likebutton/Likebutton2';
+import ListAccordionItem from './homeworks/ss3/AccordionItem/ListAccordionItem';
+// import Likebutton from './homeworks/ss3/Likebutton/Likebutton';
+// import Likebutton2 from './homeworks/ss3/Likebutton/Likebutton2';
 // import StateClass from './components/state/state';
-import Tabs from './homeworks/ss3/Tabs/Tabs';
+// import Tabs from './homewo rks/ss3/Tabs/Tabs';
 // import ChartBar1 from './homeworks/ChartBar1/ChartBar1';
 // import UI1 from './homeworks/UI1/UI1';
 // import UI2 from './homeworks/UI2/UI2';
@@ -28,10 +28,11 @@ function App() {
       <ChartBar1 text='BASIC' color1='f368e0' color2='ff9ff3' percentage={80}></ChartBar1>
       <ChartBar1 text='OTHERS' color1='341f97' color2='5f27cd' percentage={37}></ChartBar1> */}
       {/* <StateClass></StateClass> */}
-      {/* <Tabs></Tabs>
-      <Accordions></Accordions> */}
+      {/* /* <Tabs></Tabs> */}
+{/*     
       <Likebutton></Likebutton>
-      <Likebutton2></Likebutton2>
+      <Likebutton2></Likebutton2> */}
+      <ListAccordionItem></ListAccordionItem>
     </div>
     </>
   );

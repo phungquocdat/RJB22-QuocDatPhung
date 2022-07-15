@@ -1,0 +1,12 @@
+.accordion{
+    width: 50%;
+    list-style-type: none;
+    padding: 5px;
+}
+.title{
+    background-color: whitesmoke;
+    color: darkslategray;
+}
+.title:focus {
+    background-color: green;
+}

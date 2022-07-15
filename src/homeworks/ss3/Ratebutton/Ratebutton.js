@@ -9,18 +9,18 @@ export default class Ratebutton extends Component {
             star : 0
         }
     }
-    setStar = (abc) => {
+    setStar = (value) => {
         this.setState({
-          star: abc,
+          star: value,
         });
     }   
     renderStar(star) {
         let result = []
         for (let index=0; index < star; index++) {
-            result.push(<span onClick={this.setStar.bind(this.setState, index + 1)}><AiFillStar style={{color:'yellow', fontSize:'50px'}}/></span>)
+            result.push(<span onClick={this.setStar.bind(this, index + 1)}><AiFillStar style={{color:'yellow', fontSize:'50px'}}/></span>)
         }
         for (let index= star; index < MAX_STAR; index++) {
-            result.push(<span onClick={this.setStar.bind(this.setState, index + 1)}><AiOutlineStar style={{fontSize:'50px'}}/></span>)
+            result.push(<span onClick={this.setStar.bind(this, index + 1)}><AiOutlineStar style={{fontSize:'50px'}}/></span>)
         }
         return result;
     }
