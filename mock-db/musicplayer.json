@@ -1,0 +1,29 @@
+[
+    {
+        "id": "01",
+        "thumnail": "",
+        "name": "quoc dat",
+        "singer": "",
+        "duration":"",
+        "isLike" : false
+
+    },
+    {
+        "id": "02",
+        "thumnail": "",
+        "name": "Xang heo",
+        "singer": "",
+        "duration":"",
+        "isLike" : false
+
+    },
+    {
+        "id": "03",
+        "thumnail": "",
+        "name": "minh kwan",
+        "singer": "",
+        "duration":"",
+        "isLike" : false
+
+    }
+]

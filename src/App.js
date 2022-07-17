@@ -1,14 +1,21 @@
 
 import './App.css';
 import ListAccordionItem from './homeworks/ss3/AccordionItem/ListAccordionItem';
-// import Likebutton from './homeworks/ss3/Likebutton/Likebutton';
-// import Likebutton2 from './homeworks/ss3/Likebutton/Likebutton2';
+import Likebutton from './homeworks/ss3/Likebutton/Likebutton';
+import Likebutton2 from './homeworks/ss3/Likebutton/Likebutton2';
 // import StateClass from './components/state/state';
 // import Tabs from './homewo rks/ss3/Tabs/Tabs';
 // import ChartBar1 from './homeworks/ChartBar1/ChartBar1';
 // import UI1 from './homeworks/UI1/UI1';
 // import UI2 from './homeworks/UI2/UI2';
 // import UI3 from './homeworks/UI3/UI3';
+import axios from "axios";
+import UseEffect from './components/UseEffect/UseEffect';
+import Ratebutton from './homeworks/ss3/Ratebutton/Ratebutton';
+import ImageViewer from './homeworks/ss3/ImageViewer/ImageViewer';
+import MusicPlayer from './homeworks/ss3/MusicPlayer/MusicPlayer';
+axios.defaults.baseURL = 'https://62d16ee7dccad0cf176779b1.mockapi.io/'
+
 
 
 function App() {
@@ -29,10 +36,13 @@ function App() {
       <ChartBar1 text='OTHERS' color1='341f97' color2='5f27cd' percentage={37}></ChartBar1> */}
       {/* <StateClass></StateClass> */}
       {/* /* <Tabs></Tabs> */}
-{/*     
+    {/* <Ratebutton/>
       <Likebutton></Likebutton>
       <Likebutton2></Likebutton2> */}
-      <ListAccordionItem></ListAccordionItem>
+      {/* <ListAccordionItem></ListAccordionItem> */}
+      {/* <UseEffect/> */}
+      {/* <ImageView/er/> */}
+      <MusicPlayer/>
     </div>
     </>
   );
