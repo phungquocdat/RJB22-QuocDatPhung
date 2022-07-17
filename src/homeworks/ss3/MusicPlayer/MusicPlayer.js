@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import data from '../../../mock-db/musicplayer.json'
+import datas from '../../../mock-db/musicplayer.json'
 import ListMusicPlayer from './ListMusicPlayer';
 
 export default function MusicPlayer() {
 
-    console.log(data);
+    console.log(datas);
     // const [musicPlayer, setMusicPlayer] = useState(0)
   return (
     <div>
       {/* <div onClick={() => setMusicPlayer()}></div> */}
-      {data.map((data,index) => {
+      {datas.map((data,index) => {
         return(
           <div key={index}>
             <ListMusicPlayer key={`item-${index}`} index={index} data={data}  />

@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
-import { AiFillPlayCircle } from 'react-icons/ai';
+// import { AiFillPlayCircle } from 'react-icons/ai';
+import Audio1 from './Audio1';
+
 
 export default function ListMusicPlayer(props) {
     const {data,index} = props
-    const [isPlay, setIsPlay] = useState(false)
-    const user = [{}]
+    // const [isPlay, setIsPlay] = useState(false)
   return (
     <div key={`item-${index}`} >
        <div> 
         {data.id}
         {data.thumnail}
-        <AiFillPlayCircle onClick={() => setIsPlay(!isPlay)} />
+        {/* <button onClick={() => setIsPlay(!isPlay)}></button> */}
+        <Audio1 controls autoplay muted/>
         {data.name}
         {data.singer}
         {data.duration}
