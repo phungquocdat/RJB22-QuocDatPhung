@@ -3,27 +3,22 @@ import audio from './audio1.mp3'
 import { AiFillPlayCircle } from 'react-icons/ai';
 
 
+const x = {audio}
 export default class Audio1 extends Component {
-constructor (props) {
-    super(props);
-    this.state = {
-        play: false
-    }
-}
-setPlay= () => {
-    this.setState({
-        play: !this.state.play
-    })
-} 
+
 playAudio = () => {
-  new Audio(audio).play();
+  x.play();
+}
+pauseAudio = () => {
+  x.pause();
 }
 
-  render() {
-    return (
+render() {
+  return (
       <div>
-        <AiFillPlayCircle  onClick={this.setPlay}>{this.state.play ? this.playAudio() : ""}</AiFillPlayCircle>
+        <button onClick={this.playAudio}>PLAY AUDIO</button>
+        <button onClick={this.pauseAudio}>Pause AUDIO</button>
       </div>
-    )
-  }
+  );
+}
 }
