@@ -16,6 +16,7 @@ import ImageViewer from './homeworks/ss3/ImageViewer/ImageViewer';
 import MusicPlayer from './homeworks/ss3/MusicPlayer/MusicPlayer';
 import Audio1 from './homeworks/ss3/MusicPlayer/Audio1';
 import ReactHookForm from './components/ReactHookForm/ReactHookForm';
+import Router from './components/Router/Router';
 axios.defaults.baseURL = 'https://62d16ee7dccad0cf176779b1.mockapi.io/'
 
 
@@ -46,7 +47,8 @@ function App() {
       {/* <ImageView/er/> */}
       {/* <MusicPlayer/> */}
       {/* <Audio1></Audio1> */}
-      <ReactHookForm/>
+      {/* <ReactHookForm/> */}
+      <Router/>
     </div>
     </>
   );
