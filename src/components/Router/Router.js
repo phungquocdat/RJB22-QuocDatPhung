@@ -4,9 +4,8 @@ import Navigation from "./Components/Navigation";
 import Home from "./Page/Home";
 import CustomerList from "./Page/Customer/page/CustomerList";
 import CustomerForm from "./Page/Customer/page/CustomerForm";
-import ProductList from './Page/Product/page/ProductList';
-import ProductForm from './Page/Product/page/ProductForm';
-
+import ProductList from "./Page/Product/page/ProductList";
+import ProductForm from "./Page/Product/page/ProductForm";
 
 export default function Router() {
   return (
@@ -16,14 +15,13 @@ export default function Router() {
 
         <Routes>
           <Route path="/" element={<Home />}></Route>
-            <Route path="customerList" element={<CustomerList />} />
-            <Route path="customerForm" element={<CustomerForm />} />
-            <Route path="customerList/edit/:id" element={<CustomerForm />} />
+          <Route path="customerList" element={<CustomerList />} />
+          <Route path="customerForm" element={<CustomerForm />} />
+          <Route path="customerList/edit/:id" element={<CustomerForm />} />
 
-            <Route path="productList" element={<ProductList />} />
-            <Route path="productForm" element={<ProductForm />} />
-            <Route path="productList/edit/:id" element={<ProductForm />} />
-          
+          <Route path="productList" element={<ProductList />} />
+          <Route path="productForm" element={<ProductForm />} />
+          <Route path="productList/edit/:id" element={<ProductForm />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -143,8 +143,8 @@ export default function CustomerForm() {
       </div>
       <br />
       <input className="btn btn-success m-auto" type="submit" />
-      <br/>
-      <br/>
+      <br />
+      <br />
     </form>
   );
 }

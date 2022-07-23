@@ -24,9 +24,7 @@ export default function ProductList() {
   }
   const deleteData = (id) => {
     axios
-      .delete(
-        "https://62d16ee7dccad0cf176779b1.mockapi.io/product/" + id
-      )
+      .delete("https://62d16ee7dccad0cf176779b1.mockapi.io/product/" + id)
       .then(function (del) {
         console.log(del);
         fetchData();
@@ -40,8 +38,8 @@ export default function ProductList() {
   }, []);
 
   return (
-   <>
-   <table className="table table-bordered table-dark">
+    <>
+      <table className="table table-bordered table-dark">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -49,7 +47,9 @@ export default function ProductList() {
             <th scope="col">Color</th>
             <th scope="col">Price</th>
             <th scope="col">Description</th>
-            <th style={{textAlign : "center"}} scope="col">Action</th>
+            <th style={{ textAlign: "center" }} scope="col">
+              Action
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -61,15 +61,29 @@ export default function ProductList() {
                 <td>{product?.color}</td>
                 <td>{product?.price}</td>
                 <td>{product?.description}</td>
-                <td className="text-center " >
-                  <Link style={{width: 100 }} className="btn btn-primary mr-md-3" to={`edit/${product.id}`} type="button">Edit <AiOutlineEdit/></Link>
-                  <button style={{width: 100 }} className="btn btn-danger mr-md-3" onClick={(e) => deleteData(product?.id, e)} type="button">Delete <AiOutlineDelete/></button>
+                <td className="text-center ">
+                  <Link
+                    style={{ width: 100 }}
+                    className="btn btn-primary mr-md-3"
+                    to={`edit/${product.id}`}
+                    type="button"
+                  >
+                    Edit <AiOutlineEdit />
+                  </Link>
+                  <button
+                    style={{ width: 100 }}
+                    className="btn btn-danger mr-md-3"
+                    onClick={(e) => deleteData(product?.id, e)}
+                    type="button"
+                  >
+                    Delete <AiOutlineDelete />
+                  </button>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
-   </>
-  )
+    </>
+  );
 }

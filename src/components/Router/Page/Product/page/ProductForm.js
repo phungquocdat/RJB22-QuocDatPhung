@@ -3,9 +3,7 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 
-
 export default function ProductForm() {
-  
   let { id } = useParams();
   const {
     register,
@@ -58,49 +56,49 @@ export default function ProductForm() {
 
   return (
     <>
-    <form
-      className="row col-10 m-auto rounded "
-      style={{ textAlign: "center", border: "solid 1px #aaa" }}
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      <div className="col-6 ">
-        <label>NAME</label> <br />
-        <input
-          placeholder="Name"
-          {...register("name", { required: "Phai co Name" })}
-        />
-        <p style={{ color: "red" }}>{errors.name?.message}</p>
-      </div>
-      <div className="col-6 ">
-        <label>COLOR</label> <br />
-        <input
-          placeholder="#123abc"
-          {...register("color", { required: "Phai co Color" })}
-        />
-        <p style={{ color: "red" }}>{errors.color?.message}</p>
-      </div>
-      <div className="col-12 ">
-        <label>PRICE</label> <br />
-        <input
-          placeholder="Price"
-          {...register("price", { required: "Phai co Price" })}
-        />
-        <p style={{ color: "red" }}>{errors.price?.message}</p>
-      </div>
-      <div className="col-12 ">
-        <label>DESCRIPTION</label> <br />
-        <input
-          placeholder="Description"
-          {...register("description", { required: "Phai co Description" })}
-        />
-        <p style={{ color: "red" }}>{errors.description?.message}</p>
-      </div>
-      <br />
-      <br />
-      <input className="btn btn-success m-auto" type="submit" />
-      <br />
-      <br />
-    </form>
+      <form
+        className="row col-10 m-auto rounded "
+        style={{ textAlign: "center", border: "solid 1px #aaa" }}
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div className="col-6 ">
+          <label>NAME</label> <br />
+          <input
+            placeholder="Name"
+            {...register("name", { required: "Phai co Name" })}
+          />
+          <p style={{ color: "red" }}>{errors.name?.message}</p>
+        </div>
+        <div className="col-6 ">
+          <label>COLOR</label> <br />
+          <input
+            placeholder="#123abc"
+            {...register("color", { required: "Phai co Color" })}
+          />
+          <p style={{ color: "red" }}>{errors.color?.message}</p>
+        </div>
+        <div className="col-12 ">
+          <label>PRICE</label> <br />
+          <input
+            placeholder="Price"
+            {...register("price", { required: "Phai co Price" })}
+          />
+          <p style={{ color: "red" }}>{errors.price?.message}</p>
+        </div>
+        <div className="col-12 ">
+          <label>DESCRIPTION</label> <br />
+          <input
+            placeholder="Description"
+            {...register("description", { required: "Phai co Description" })}
+          />
+          <p style={{ color: "red" }}>{errors.description?.message}</p>
+        </div>
+        <br />
+        <br />
+        <input className="btn btn-success m-auto" type="submit" />
+        <br />
+        <br />
+      </form>
     </>
-  )
+  );
 }
