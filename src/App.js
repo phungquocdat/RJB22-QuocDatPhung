@@ -3,7 +3,7 @@ import './App.css';
 import ListAccordionItem from './homeworks/ss3/AccordionItem/ListAccordionItem';
 import Likebutton from './homeworks/ss3/Likebutton/Likebutton';
 import Likebutton2 from './homeworks/ss3/Likebutton/Likebutton2';
-// import StateClass from './components/state/state';
+import StateClass from './components/state/state';
 // import Tabs from './homewo rks/ss3/Tabs/Tabs';
 // import ChartBar1 from './homeworks/ChartBar1/ChartBar1';
 // import UI1 from './homeworks/UI1/UI1';
@@ -17,6 +17,7 @@ import MusicPlayer from './homeworks/ss3/MusicPlayer/MusicPlayer';
 import Audio1 from './homeworks/ss3/MusicPlayer/Audio1';
 import ReactHookForm from './components/ReactHookForm/ReactHookForm';
 import Router from './components/Router/Router';
+import Form01 from './homeworks/ss6/Form01/Form01';
 axios.defaults.baseURL = 'https://62d16ee7dccad0cf176779b1.mockapi.io/'
 
 
@@ -39,7 +40,7 @@ function App() {
       <ChartBar1 text='OTHERS' color1='341f97' color2='5f27cd' percentage={37}></ChartBar1> */}
       {/* <StateClass></StateClass> */}
       {/* /* <Tabs></Tabs> */}
-    {/* <Ratebutton/>
+      {/* <Ratebutton/>
       <Likebutton></Likebutton>
       <Likebutton2></Likebutton2> */}
       {/* <ListAccordionItem></ListAccordionItem> */}
@@ -47,8 +48,11 @@ function App() {
       {/* <ImageView/er/> */}
       {/* <MusicPlayer/> */}
       {/* <Audio1></Audio1> */}
-      {/* <ReactHookForm/> */}
-      <Router/>
+      {/* <ReactHookForm/> */} 
+      <Form01/>
+{/* ss7 */} 
+      {/* <Router/>  */}
+      {/* ss8 */}
     </div>
     </>
   );
