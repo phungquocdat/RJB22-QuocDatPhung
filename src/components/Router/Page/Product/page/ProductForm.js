@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom";
 
 export default function ProductForm() {
@@ -14,6 +15,13 @@ export default function ProductForm() {
   const onSubmit = (data, event) => {
     event.preventDefault();
     console.log(data);
+    toast.success(" SUCCESSFULLY SUBMIT !👏 SEEEE YAHHH !!!👏 ", {
+      style: {
+        borderRadius: "10px",
+        background: "#F637EC",
+        color: "#fff",
+      },
+    });
     if (id) {
       fetchUpdateData(data);
     } else {
@@ -56,32 +64,34 @@ export default function ProductForm() {
 
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       <form
-        className="row col-10 m-auto rounded "
-        style={{ textAlign: "center", border: "solid 1px #aaa" }}
+        className="row col-8 m-auto rounded font-weight-bold "
+        style={{ textAlign: "center", border: "solid 1px #aaa",backgroundColor:"#FFDEDE",minHeight:"100vh" }}
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="col-6 ">
           <label>NAME</label> <br />
           <input
             placeholder="Name"
-            {...register("name", { required: "Phai co Name" })}
+            {...register("name", { required: "Name is required" })}
           />
           <p style={{ color: "red" }}>{errors.name?.message}</p>
         </div>
         <div className="col-6 ">
           <label>COLOR</label> <br />
-          <input
-            placeholder="#123abc"
-            {...register("color", { required: "Phai co Color" })}
+          <input 
+            placeholder="#123abc , Color"
+            {...register("color", { required: "Color is required" })}
           />
           <p style={{ color: "red" }}>{errors.color?.message}</p>
         </div>
         <div className="col-12 ">
           <label>PRICE</label> <br />
           <input
+            type={"number"}
             placeholder="Price"
-            {...register("price", { required: "Phai co Price" })}
+            {...register("price", { required: "Price is required" })}
           />
           <p style={{ color: "red" }}>{errors.price?.message}</p>
         </div>
@@ -89,15 +99,11 @@ export default function ProductForm() {
           <label>DESCRIPTION</label> <br />
           <input
             placeholder="Description"
-            {...register("description", { required: "Phai co Description" })}
+            {...register("description", { required: "Description is required" })}
           />
           <p style={{ color: "red" }}>{errors.description?.message}</p>
         </div>
-        <br />
-        <br />
         <input className="btn btn-success m-auto" type="submit" />
-        <br />
-        <br />
       </form>
     </>
   );

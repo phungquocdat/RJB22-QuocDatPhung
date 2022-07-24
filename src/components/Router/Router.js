@@ -7,10 +7,13 @@ import CustomerForm from "./Page/Customer/page/CustomerForm";
 import ProductList from "./Page/Product/page/ProductList";
 import ProductForm from "./Page/Product/page/ProductForm";
 
+
 export default function Router() {
   return (
-    <div>
-      <BrowserRouter>
+    <div style={{backgroundImage : `url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnjzCkb7v9BiOximq9-apwW4H9J16KqcvIew&usqp=CAU)`,
+      minHeight: "100vh"    
+    }} >
+      <BrowserRouter >
         <Navigation></Navigation>
 
         <Routes>

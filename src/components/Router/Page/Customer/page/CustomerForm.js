@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom";
 
 export default function CustomerForm() {
@@ -15,6 +16,13 @@ export default function CustomerForm() {
   const onSubmit = (data, event) => {
     event.preventDefault();
     console.log(data);
+    toast.success(" SUCCESSFULLY SUBMIT !👏 SEEEE YAHHH !!!👏 ", {
+      style: {
+        borderRadius: "10px",
+        background: "#F637EC",
+        color: "#fff",
+      },
+    });
     if (id) {
       fetchUpdateData(data);
     } else {
@@ -61,16 +69,18 @@ export default function CustomerForm() {
   }, []);
 
   return (
+    <>
+      <Toaster position="top-center" reverseOrder={false} />
     <form
-      className="row col-10 m-auto rounded "
-      style={{ textAlign: "center", border: "solid 1px #aaa" }}
+      className="row col-8 m-auto rounded font-weight-bold"
+      style={{ textAlign: "center", border: "solid 1px #aaa", backgroundColor:"#FFDEDE",minHeight:"100vh" }}
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="col-6 ">
         <label>NAME</label> <br />
         <input
           placeholder="Name"
-          {...register("name", { required: "Phai co Name" })}
+          {...register("name", { required: "Name is required" })}
         />
         <p style={{ color: "red" }}>{errors.name?.message}</p>
       </div>
@@ -79,25 +89,23 @@ export default function CustomerForm() {
         <input
           placeholder="Email@abc123.xyz"
           {...register("mail", {
-            required: "Phai co Email",
+            required: "Email is required",
             pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/,
           })}
         />
         <p style={{ color: "red" }}>{errors.mail?.message}</p>
         <p style={{ color: "red" }}>
-          {errors.mail?.type === "pattern" ? "Phai dung dinh dang email" : ""}
+          {errors.mail?.type === "pattern" ? "INVALID EMAIL ADDRESS" : ""}
         </p>
       </div>
-      <br />
       <div className="col-12">
         <label>POSTCODE</label> <br />
         <input
           placeholder="PostCode"
-          {...register("postCode", { required: "Phai co postCode" })}
+          {...register("postCode", { required: "PostCode is required" })}
         />
         <p style={{ color: "red" }}>{errors.postCode?.message}</p>
       </div>
-      <br />
       <div className="col-12">
         <label>ADDRESS</label> <br />
         <input
@@ -106,45 +114,37 @@ export default function CustomerForm() {
         />
         {errors.Address && <p>Address required</p>}
       </div>
-      <br />
-      <br />
       <div className="col-12">
         <label>DAY OF BIRTH</label> <br />
         <input
-          type="date"
-          {...register("dob", { required: "Phai co Day of birth" })}
+          placeholder="YYYY-MM-DD"
+          {...register("dob", { required: "DAY OF BIRTH is required" })}
         />
         <p style={{ color: "red" }}>{errors.dob?.message}</p>
       </div>
-      <br />
-      <br />
       <div className="col-12">
         <label>PHONE NUMBER</label> <br />
         <input
           type="tel"
           placeholder="Phone Number"
-          {...register("phone", { required: "Phai co Phone" })}
+          {...register("phone", { required: "Phone is required" })}
         />
         <p style={{ color: "red" }}>{errors.phone?.message}</p>
       </div>
-
-      <br />
       <div className="col-12">
         <label htmlFor="gender">GENDER</label>
         <select
           id="gender"
           defaultValue=""
-          {...register("gender", { required: true })}
+          {...register("gender", { required: false })}
         >
           <option value="">Choose</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
       </div>
-      <br />
       <input className="btn btn-success m-auto" type="submit" />
-      <br />
-      <br />
-    </form>
+         </form>
+    </>
   );
 }

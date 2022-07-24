@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
+import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import CustomerForm from "../../Customer/page/CustomerForm";
 
 export default function ProductList() {
+  const [isLoad, setIsLoad] = useState(true);
   const [productList, setProductList] = useState([]);
 
   let url = "https://62d16ee7dccad0cf176779b1.mockapi.io/product";
@@ -17,6 +20,7 @@ export default function ProductList() {
         },
       });
       let temp = await response.data;
+      setIsLoad(false);
       setProductList(temp);
     } catch (err) {
       console.log("Error: ", err.message);
@@ -27,6 +31,13 @@ export default function ProductList() {
       .delete("https://62d16ee7dccad0cf176779b1.mockapi.io/product/" + id)
       .then(function (del) {
         console.log(del);
+        toast.success(" SUCCESSFULLY DELETE  ! 👏 BYE BYE 👏 ", {
+          style: {
+            borderRadius: "10px",
+            background: "#F637EC",
+            color: "#fff",
+          },
+        });
         fetchData();
       })
       .catch(function (error) {
@@ -39,6 +50,7 @@ export default function ProductList() {
 
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       <table className="table table-bordered table-dark">
         <thead>
           <tr>
@@ -52,6 +64,7 @@ export default function ProductList() {
             </th>
           </tr>
         </thead>
+        {isLoad && "Loadding..."}
         <tbody>
           {productList.map((product, index) => {
             return (
@@ -84,6 +97,7 @@ export default function ProductList() {
           })}
         </tbody>
       </table>
+      
     </>
   );
 }
