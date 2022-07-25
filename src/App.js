@@ -18,6 +18,7 @@ import Audio1 from './homeworks/ss3/MusicPlayer/Audio1';
 import ReactHookForm from './components/ReactHookForm/ReactHookForm';
 import Router from './components/Router/Router';
 import Form01 from './homeworks/ss6/Form01/Form01';
+import ReduxForm from './ReduxForm';
 axios.defaults.baseURL = 'https://62d16ee7dccad0cf176779b1.mockapi.io/'
 
 
@@ -49,10 +50,11 @@ function App() {
       {/* <MusicPlayer/> */}
       {/* <Audio1></Audio1> */}
       {/* <ReactHookForm/> */} 
-      <Form01/>
+      {/* <Form01/> */}
 {/* ss7 */} 
       {/* <Router/>  */}
       {/* ss8 */}
+      <ReduxForm/>
     </div>
     </>
   );
